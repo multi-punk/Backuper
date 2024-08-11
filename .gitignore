@@ -9,6 +9,7 @@ __pycache__/
 Scripts/
 Include/
 .vscode/
+pyvenv.cfg
 
 # Distribution / packaging
 .Python
