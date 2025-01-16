@@ -10,13 +10,15 @@ this file should have this fields
 
 ```json
 {
-    "world_folder_name": "Bedrock level", //name of world folder
-    "backups_count": 0, //specifies max count of backups that this plugin will store
-    "delay": 0, //specifies delay before first backup on start
-    "period": 0 //specifies delay between backups
+    "world_folder_name": "Bedrock level", //name of the folder of the world to backup
+    "types": {
+        "profile": { //name of backup profile
+            "time_between": 60, //time in seconds
+            "max_count": 1 //max count of backups for this backup profile
+        }
+    },
+    "saved_tasks": {} //here will be stored timings of backups tasks
 }
 ```
 
-note all time intervals are in minecraft ticks 1 second = 20 ticks
-
-note that plugin create backups on server shutdown
+note that plugin create backups on server shutdown in folder of the first backup profile
